@@ -1,0 +1,36 @@
+server:
+  listen:
+    host: "0.0.0.0"
+    port: 7900
+  tls:
+    host: "0.0.0.0"
+    port: 7943
+  status:
+    disable: false
+    host: "127.0.0.1"
+    port: 7901
+
+log:
+  level: warn
+  output: stderr
+
+database:
+  dsn: "postgres://api7ee:changeme@postgresql:5432/api7ee"
+
+prometheus:
+  addr: "http://prometheus:9090"
+  # basic_auth: # access the prometheus with basic-auth
+  #   username: "" # Basic-auth username. If the username is empty, basic-auth authentication is not performed when requesting prometheus.
+  #   password: ""
+  # tls:
+  #   server_name: ""
+  #   insecure_skip_verify: false
+  #   enable_client_cert: false
+  #   key_file: ""  # the file path of the private key for requesting prometheus, (e.g. /app/prometheus/certs/tls.key)
+  #   cert_file: "" # the file path of the certificate for requesting prometheus, (e.g. /app/prometheus/certs/tls.crt)
+  #   ca_file: ""   # the file path of the ca to verify the prometheus tls server. (e.g. /app/prometheus/certs/ca.crt)
+
+rate_limit:
+  enable: false
+  time_window: 1 # unit: second
+  count: 1000
