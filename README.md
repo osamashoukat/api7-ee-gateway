@@ -1,4 +1,10 @@
 # api7-ee-gateway
-Create postgres_data and prometheus_data Folder Before 
-Create gateway Schema in Postgres DB
-docker-compose up -d
+
+## Prerequisites
+
+Before running the project, make sure to:
+
+1. **Create the required folders:**
+
+   ```bash
+   mkdir -p postgresql_data prometheus_data
